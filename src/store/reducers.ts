@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { rouletteReducer } from './Roulette/reducer';
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
     rouletteReducer,
 });
 
-export type RootState = ReturnType<typeof reducers>;
+export type RootState = ReturnType<typeof rootReducer>;
 
-export default reducers;
+export { rootReducer };

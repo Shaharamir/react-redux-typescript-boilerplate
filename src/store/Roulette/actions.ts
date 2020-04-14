@@ -1,20 +1,12 @@
+import { createAction } from '@reduxjs/toolkit';
 
-export const INCREASE =  'INCREASE';
-
-export interface Increase {
-    type: typeof INCREASE
-    payload: {
-        value: number
-    }
-}
-
-export const increase = (value: number): Increase => {
+const increase = createAction('roulette/increase', (number: Number) => {
     return {
-        type: INCREASE,
         payload: {
-            value
+            value: number
         }
-    };
-}
+    }
+})
 
-export type RouletteActions = Increase
+export { increase }
+export type RouletteActions = typeof increase
