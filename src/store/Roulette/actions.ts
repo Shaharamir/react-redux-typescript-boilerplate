@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const increase = createAction('roulette/increase', (number: Number) => {
+const increase = createAction('roulette/increase', (number: number) => {
     return {
         payload: {
             value: number
