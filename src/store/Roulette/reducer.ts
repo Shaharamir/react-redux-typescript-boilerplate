@@ -10,9 +10,9 @@ const rouletteState: RouletteState = {
     number: 0,
 }
 
-export const rouletteReducer = createReducer(rouletteState, {
-    [increase as unknown as string]: (state, action) => {
-        state.number += action.payload.value
-        return state;
-      },
-})
+export const rouletteReducer = createReducer(rouletteState, builder =>
+    builder
+        .addCase(increase, (state, action) => {
+            state.number += action.payload.value
+        })
+)
